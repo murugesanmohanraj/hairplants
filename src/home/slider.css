@@ -1,0 +1,26 @@
+.slick-next {
+  background-color: #cbae18;
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+  right: -50px;
+}
+
+.slick-prev {
+  background-color: #cbae18;
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+  left: -35px;
+}
+
+.slick-arrow:hover {
+  display: block !important;
+}
+
+.carouselButton {
+  background-color: #cbae18;
+  padding: 5px 10px;
+  border-radius: 18px;
+  font-size: 13px;
+}

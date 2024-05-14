@@ -1,0 +1,72 @@
+div {
+  font-family: Nunito Sans !important;
+}
+
+p {
+  font-family: Nunito Sans !important;
+}
+
+span {
+  font-family: Nunito Sans !important;
+}
+
+h1 {
+  font-family: Nunito Sans !important;
+}
+
+h2 {
+  font-family: Nunito Sans !important;
+}
+
+h3 {
+  font-family: Nunito Sans !important;
+}
+
+h4 {
+  font-family: Nunito Sans !important;
+}
+
+h5 {
+  font-family: Nunito Sans !important;
+}
+
+h6 {
+  font-family: Nunito Sans !important;
+}
+
+button {
+  font-family: Nunito Sans !important;
+}
+
+#button-2 {
+  width: 200px;
+  font-size: 18px;
+  padding: 5px 5px;
+  border-radius: 3px;
+  font-family: "Unna", serif;
+  color: #fff;
+  border: 3px solid #cbae18;
+  background-image: -webkit-linear-gradient(
+    30deg,
+    #cbae18 50%,
+    transparent 50%
+  );
+  background-image: linear-gradient(30deg, #cbae18 50%, transparent 50%);
+  background-size: 500px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+  border-radius: 10px;
+}
+
+#button-2:hover {
+  background-position: 100%;
+  color: #4e4e4e;
+  font-family: "Unna", serif;
+}
+
+.sliderContainer {
+  width: 90%;
+  margin: auto;
+}

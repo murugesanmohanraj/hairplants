@@ -1,0 +1,17 @@
+.finalSubmit {
+    background-color: #cbae18;
+    width: 132px !important;
+    margin: auto;
+    font-size: large;
+    font-weight: 500;
+    border-radius: 6px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px !important;
+}
+
+.finalSubmit:hover {
+    background-color: #ffd60030 !important;
+}
