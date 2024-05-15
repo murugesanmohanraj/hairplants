@@ -58,6 +58,7 @@ const Home = () => {
   return (
     <div>
       <Headers />
+      <div className="w-100" style={{ height: 76 }}></div>
       <Banner />
       <div className="container pt-5 pb-4">
         <h3

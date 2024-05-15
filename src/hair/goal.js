@@ -10,7 +10,14 @@ import img6 from "../img/face6.png";
 function Looklike({ faceShape, setFaceShape }) {
   return (
     <>
-      <div style={{ width: "100%", textAlign: "center", fontSize: 17 }}>
+      <div
+        style={{
+          width: "100%",
+          textAlign: "center",
+          fontSize: 17,
+          fontWeight: "600",
+        }}
+      >
         Which face shape best suits you?
       </div>
 
@@ -78,7 +85,7 @@ function Looklike({ faceShape, setFaceShape }) {
                   ></input>
                   &nbsp;
                   <label class="form-check-label" for="flexRadioDefault1">
-                    HEART
+                    Heart
                   </label>
                 </div>
               </div>
@@ -93,7 +100,7 @@ function Looklike({ faceShape, setFaceShape }) {
                   ></input>
                   &nbsp;
                   <label class="form-check-label" for="flexRadioDefault1">
-                    TRIANGLE
+                    Triangle
                   </label>
                 </div>
               </div>
@@ -164,7 +171,7 @@ function Looklike({ faceShape, setFaceShape }) {
                   ></input>
                   &nbsp;
                   <label class="form-check-label" for="flexRadioDefault1">
-                    OVAL
+                    Oval
                   </label>
                 </div>
               </div>
@@ -179,7 +186,7 @@ function Looklike({ faceShape, setFaceShape }) {
                   ></input>
                   &nbsp;
                   <label class="form-check-label" for="flexRadioDefault1">
-                    ROUND
+                    Round
                   </label>
                 </div>
               </div>
@@ -250,7 +257,7 @@ function Looklike({ faceShape, setFaceShape }) {
                   ></input>
                   &nbsp;
                   <label class="form-check-label" for="flexRadioDefault1">
-                    DIAMOND
+                    Diamond
                   </label>
                 </div>
               </div>
@@ -265,7 +272,7 @@ function Looklike({ faceShape, setFaceShape }) {
                   ></input>
                   &nbsp;
                   <label class="form-check-label" for="flexRadioDefault1">
-                    SQUARE
+                    Square
                   </label>
                 </div>
               </div>

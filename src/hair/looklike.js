@@ -26,6 +26,7 @@ function Looklike({ formData, setFormData }) {
           textAlign: "center",
           fontSize: 17,
           marginBottom: 40,
+          fontWeight: "600",
         }}
       >
         Which hair loss stage looks similar to yours?
@@ -34,7 +35,7 @@ function Looklike({ formData, setFormData }) {
         class="container-fluid d-flex justify-content-center"
         style={{ marginTop: "-30px" }}
       >
-        <div class="row w-75 mt-3">
+        <div class="row w-100 mt-3">
           <div class="col-md-12">
             <div
               class="btn-group d-flex justify-content-evenly d-grid gap-5"
@@ -93,7 +94,7 @@ function Looklike({ formData, setFormData }) {
         class="container-fluid d-flex justify-content-center"
         style={{ marginTop: "-35px", marginBottom: "20px" }}
       >
-        <div class="row w-75  mt-5">
+        <div class="row w-100  mt-5">
           <div class="col-md-12">
             <div
               class="btn-group d-flex justify-content-evenly d-grid gap-5"
@@ -134,7 +135,7 @@ function Looklike({ formData, setFormData }) {
         class="container-fluid d-flex justify-content-center"
         style={{ marginTop: "-80px" }}
       >
-        <div class="row w-75 mt-5">
+        <div class="row w-100 mt-5">
           <div class="col-md-12">
             <div
               class="btn-group d-flex justify-content-evenly d-grid gap-5"
@@ -193,7 +194,7 @@ function Looklike({ formData, setFormData }) {
         class="container-fluid d-flex justify-content-center"
         style={{ marginTop: "-35px", marginBottom: "20px" }}
       >
-        <div class="row w-75  mt-5">
+        <div class="row w-100  mt-5">
           <div class="col-md-12">
             <div
               class="btn-group d-flex justify-content-evenly d-grid gap-5"
@@ -233,7 +234,7 @@ function Looklike({ formData, setFormData }) {
         class="container-fluid d-flex justify-content-center"
         style={{ marginTop: "-80px" }}
       >
-        <div class="row w-75 mt-5">
+        <div class="row w-100 mt-5">
           <div class="col-md-12">
             <div
               class="btn-group d-flex justify-content-evenly d-grid gap-5"
@@ -292,7 +293,7 @@ function Looklike({ formData, setFormData }) {
         class="container-fluid d-flex justify-content-center"
         style={{ marginTop: "-35px", marginBottom: "20px" }}
       >
-        <div class="row w-75  mt-5">
+        <div class="row w-100  mt-5">
           <div class="col-md-12">
             <div
               class="btn-group d-flex justify-content-evenly d-grid gap-5"
@@ -332,7 +333,7 @@ function Looklike({ formData, setFormData }) {
         class="container-fluid d-flex justify-content-center"
         style={{ marginTop: "-80px" }}
       >
-        <div class="row w-75 mt-5">
+        <div class="row w-100 mt-5">
           <div class="col-md-12">
             <div
               class="btn-group d-flex justify-content-evenly d-grid gap-5"
@@ -391,7 +392,7 @@ function Looklike({ formData, setFormData }) {
         class="container-fluid d-flex justify-content-center"
         style={{ marginTop: "-35px" }}
       >
-        <div class="row w-75  mt-5">
+        <div class="row w-100  mt-5">
           <div class="col-md-12">
             <div
               class="btn-group d-flex justify-content-evenly d-grid gap-5"

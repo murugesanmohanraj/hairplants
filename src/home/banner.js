@@ -7,10 +7,12 @@ import { Col, Row } from "antd";
 const Banner = () => {
   const navigate = useNavigate();
   const [screenHeight, setScreenHeight] = useState(window.innerHeight);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     const handleResize = () => {
       setScreenHeight(window.innerHeight);
+      setScreenWidth(window.innerWidth);
     };
 
     window.addEventListener("resize", handleResize);
@@ -32,10 +34,14 @@ const Banner = () => {
         >
           <Col lg={12} md={12} sm={0} xs={0}>
             <div className="mb-5">
-              <h3 className="flex-item slideUp" id="para_1">
+              <h1
+                className="flex-item slideUp"
+                id="para_1"
+                style={{ fontWeight: "bold", fontSize: "3.5rem" }}
+              >
                 Hair Transplant that look completely natural,
                 <br /> just like real hair
-              </h3>
+              </h1>
               <div className="mt-5">
                 <button
                   type="button"
@@ -48,49 +54,42 @@ const Banner = () => {
               </div>
             </div>
           </Col>
-          <Col lg={12} md={12} sm={0} xs={0}>
-            <div className="video-container">
+          <Col lg={0} md={0} sm={24} xs={24}>
+            <div className="mt-4 mb-4 pl-3 pr-3">
+              <br />
+              <br />
+              <br />
+              <h2
+                className="flex-item slideUp"
+                id="para_1"
+                style={{
+                  fontWeight: "bold",
+                  textAlign: "left",
+                  fontSize: "3rem",
+                }}
+              >
+                Hair Transplant that look completely natural, just like real
+                hair
+              </h2>
+              <br />
+              <br />
+              <br />
+            </div>
+          </Col>
+          <Col lg={12} md={12} sm={24} xs={24}>
+            <div
+              className="video-container"
+              style={{ height: screenWidth <= 767 && screenHeight - 165 }}
+            >
               <video
                 width="100%"
                 controls
                 autoPlay
-                className="responsive-video"
+                className={screenWidth > 767 && "responsive-video"}
               >
                 <source src={bannerVid} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-            </div>
-          </Col>
-        </Row>
-        <Row
-          gutter={0}
-          style={{
-            margin: 0,
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <Col lg={0} md={0} sm={24} xs={24}>
-            <div
-              className="video-container"
-              style={{ height: screenHeight - 165 }}
-            >
-              <video width="100%" controls autoPlay>
-                <source src={bannerVid} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </Col>
-          <Col lg={0} md={0} sm={24} xs={24}>
-            <div className="mt-4 mb-4 pl-3 pr-3">
-              <h4
-                className="flex-item slideUp"
-                id="para_1"
-                style={{ textAlign: "center" }}
-              >
-                Hair Transplant that look completely natural, just like real
-                hair
-              </h4>
             </div>
           </Col>
         </Row>

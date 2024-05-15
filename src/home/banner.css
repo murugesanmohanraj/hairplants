@@ -23,12 +23,29 @@
   height: 100%;
 }
 
+.laptopBanner {
+  display: block;
+}
+
+.mobileBanner {
+  display: none;
+}
+
 @media screen and (max-width: 767px) {
   .banner {
     padding: 0 !important;
+    background-color: transparent;
   }
 
   .banner2 {
     width: 100% !important;
+  }
+
+  .laptopBanner {
+    display: none;
+  }
+
+  .mobileBanner {
+    display: block;
   }
 }

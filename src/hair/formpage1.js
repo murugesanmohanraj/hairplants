@@ -23,19 +23,16 @@ function FormPage1() {
 
   const notify = (x, err) => {
     if (x) {
-      toast.success(
-        "Thank you. Your hair transplant cost analysis report will be sent to your mobile number soon!",
-        {
-          position: "top-right",
-          autoClose: 2000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "colored",
-        }
-      );
+      toast.success("Thank you. Now you are in final step!", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
     } else {
       toast.error(err ? err : "Something went wrong. Please try again later!", {
         position: "top-right",
@@ -64,8 +61,6 @@ function FormPage1() {
         return <NotFoundPage />;
     }
   };
-
-  console.log(aboutYou);
 
   useEffect(() => {
     const handleResize = () => {
@@ -133,7 +128,24 @@ function FormPage1() {
           <div className="form">
             <div className="form-container shadow-none">
               <div
-                className="progressbar w-75"
+                className="halfWidth"
+                style={{ color: "black", margin: "auto" }}
+              >
+                <div className="d-flex justify-content-between mb-4">
+                  {FormTitles.map((itm) => (
+                    <div
+                      key={itm}
+                      className={`topTabs ${
+                        itm === FormTitles[page] ? "topTabs1" : "topTabs2"
+                      }`}
+                    >
+                      {itm}
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div
+                className="progressbar halfWidth"
                 style={{ color: "black", margin: "auto" }}
               >
                 <div
@@ -147,14 +159,13 @@ function FormPage1() {
                   {Math.round((page + 1) * (100 / FormTitles.length))}%
                 </div>
               </div>
-              <div className="header mt-5 mb-2">
-                <h4 style={{ fontWeight: "600" }}>{FormTitles[page]}</h4>
-              </div>
-              <div className="body">{PageDisplay()}</div>
+              <div className="body mt-5">{PageDisplay()}</div>
               <div className="footer">
                 <button
                   onClick={() => {
-                    setPage((currPage) => currPage - 1);
+                    if (page !== 0) {
+                      setPage((currPage) => currPage - 1);
+                    }
                   }}
                   style={{
                     cursor: page === 0 && "no-drop",
