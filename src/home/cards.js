@@ -17,7 +17,7 @@ const Cards = ({ cardsData }) => (
             }
           >
             <Meta
-              title={itm.desc1}
+              title={<div>{itm.desc1} transplanted</div>}
               description={
                 <div
                   style={{ color: "black", fontSize: 16, fontWeight: "400" }}

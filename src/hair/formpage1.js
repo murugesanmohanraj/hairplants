@@ -7,7 +7,7 @@ import NotFoundPage from "./genetic";
 import "./form.css";
 import { useNavigate } from "react-router-dom";
 // import AuthAxios from "../intreceptor/authAxios";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 
 function FormPage1() {
   const [page, setPage] = useState(0);
@@ -20,32 +20,6 @@ function FormPage1() {
     age: "",
   });
   const [screenHeight, setScreenHeight] = useState(window.innerHeight);
-
-  const notify = (x, err) => {
-    if (x) {
-      toast.success("Thank you. Now you are in final step!", {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
-      });
-    } else {
-      toast.error(err ? err : "Something went wrong. Please try again later!", {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
-      });
-    }
-  };
 
   const FormTitles = ["Face shape", "Hair loss stage", "About you"];
 
@@ -77,10 +51,7 @@ function FormPage1() {
   const navigate = useNavigate();
 
   const submitData = () => {
-    notify(true);
-    setTimeout(() => {
-      window.location.href = "/testHair";
-    }, 2000);
+    window.location.href = "/testHair";
 
     // AuthAxios.post("sdcs", {})
     //   .then((res) => {
@@ -138,10 +109,17 @@ function FormPage1() {
                       className={`topTabs ${
                         itm === FormTitles[page] ? "topTabs1" : "topTabs2"
                       }`}
+                      style={{ padding: "0px 6px" }}
                     >
                       {itm}
                     </div>
                   ))}
+                  <div
+                    className={`topTabs topTabs2`}
+                    style={{ padding: "0px 6px" }}
+                  >
+                    Graft calculator
+                  </div>
                 </div>
               </div>
               <div
@@ -226,7 +204,7 @@ function FormPage1() {
                           "darkgray",
                   }}
                 >
-                  {page === FormTitles.length - 1 ? "Done" : "Next"}
+                  {page === FormTitles.length - 1 ? "Next" : "Next"}
                 </button>
               </div>
             </div>

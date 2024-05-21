@@ -45,13 +45,13 @@ button {
   border-radius: 3px;
   font-family: "Unna", serif;
   color: #fff;
-  border: 3px solid #cbae18;
+  border: 3px solid #343a40;
   background-image: -webkit-linear-gradient(
     30deg,
-    #cbae18 50%,
+    #343a40 50%,
     transparent 50%
   );
-  background-image: linear-gradient(30deg, #cbae18 50%, transparent 50%);
+  background-image: linear-gradient(30deg, #343a40 50%, transparent 50%);
   background-size: 500px;
   background-repeat: no-repeat;
   background-position: 0%;
@@ -69,4 +69,14 @@ button {
 .sliderContainer {
   width: 90%;
   margin: auto;
+}
+
+.slick-arrow {
+  background-color: black !important;
+  width: 25px !important;
+  height: 25px !important;
+}
+
+.slick-arrow::after {
+  display: none !important;
 }

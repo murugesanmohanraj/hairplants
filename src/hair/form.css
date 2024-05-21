@@ -251,7 +251,7 @@ input:focus {
 } */
 
 .topTabs {
-  height: 50px;
+  height: 60px;
   width: 100%;
   display: flex;
   justify-content: center;

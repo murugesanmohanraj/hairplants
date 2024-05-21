@@ -1,0 +1,8 @@
+.gradient-custom {
+  background-image: linear-gradient(120deg, #f6d365ad 0%, #fda085a8 100%);
+}
+.carousel-indicators {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}

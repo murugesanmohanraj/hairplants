@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Slider from "react-slick";
 import one from "./img/col/1.jpg";
 import two from "./img/col/2.jpg";
@@ -11,7 +11,6 @@ import eight from "./img/col/8.jpg";
 import nine from "./img/col/9.jpg";
 import ten from "./img/col/10.jpg";
 import eleven from "./img/col/11.jpg";
-import google from "./img/google-icon.webp";
 import "./slider.css";
 
 const Sliders = () => {
@@ -50,28 +49,73 @@ const Sliders = () => {
     ],
   };
 
-  const [buttonName, setButtonName] = useState(null);
-
-  const changeButtonName = (i) => {
-    if (i === buttonName) {
-      setButtonName(null);
-    } else {
-      setButtonName(i);
-    }
-  };
-
   const data = [
-    one,
-    two,
-    three,
-    four,
-    five,
-    six,
-    seven,
-    eight,
-    nine,
-    ten,
-    eleven,
+    {
+      img: one,
+      tag1: "Stage 4 baldness.",
+      tag2: "Restored with 3570 grafts.",
+      tag3: "After 10 months result.",
+    },
+    {
+      img: two,
+      tag1: "Stage 5 baldness.",
+      tag2: "Restored with 4715 grafts.",
+      tag3: "After 12 months result.",
+    },
+    {
+      img: three,
+      tag1: "Stage 4 baldness.",
+      tag2: "Restored with 3800 grafts.",
+      tag3: "After 9 months result.",
+    },
+    {
+      img: four,
+      tag1: "Stage 3 baldness.",
+      tag2: "Corrected with 2550 grafts.",
+      tag3: "After 10 months result.",
+    },
+    {
+      img: five,
+      tag1: "Stage 4 baldness.",
+      tag2: "Treated with 4130 grafts.",
+      tag3: "After 12 months result.",
+    },
+    {
+      img: six,
+      tag1: "Stage 6 baldness.",
+      tag2: "Treated with 3800 grafts.",
+      tag3: "After 10 months result.",
+    },
+    {
+      img: seven,
+      tag1: "Stage 5 baldness.",
+      tag2: "Corrected with 4580 grafts.",
+      tag3: "After 10 months result.",
+    },
+    {
+      img: eight,
+      tag1: "Stage 4 baldness.",
+      tag2: "Treated with 4260 grafts.",
+      tag3: "After 10 months result.",
+    },
+    {
+      img: nine,
+      tag1: "Stage 7 baldness.",
+      tag2: "Corrected with 7430 grafts.",
+      tag3: "After 14 months result.",
+    },
+    {
+      img: ten,
+      tag1: "Stage 7 baldness.",
+      tag2: "Corrected with 7430 grafts.",
+      tag3: "After 14 months result.",
+    },
+    {
+      img: eleven,
+      tag1: "Stage 3 baldness.",
+      tag2: "Treated with 3440 grafts.",
+      tag3: "After 12 months result.",
+    },
   ];
 
   return (
@@ -83,16 +127,19 @@ const Sliders = () => {
               <div class="m-2" id="review">
                 <div class="thumbnail shadow-none bg-light border">
                   <img
-                    src={itm}
+                    src={itm.img}
                     alt=""
                     style={{
-                      maxHeight: 200,
+                      height: 180,
                       width: "100%",
                       objectFit: "cover",
                     }}
                   />
                   <div className="p-2">
-                    <h5 class="card-title mt-2">
+                    <h5
+                      class="card-title mt-3 mb-4"
+                      style={{ textAlign: "center" }}
+                    >
                       <i
                         class="fa-solid fa-star"
                         style={{ color: "orange", cursor: "pointer" }}
@@ -111,10 +158,21 @@ const Sliders = () => {
                       ></i>
                       <i
                         class="fa-solid fa-star"
-                        style={{ color: "#ccc", cursor: "pointer" }}
+                        style={{ color: "orange", cursor: "pointer" }}
                       ></i>
                     </h5>
-                    <p class="card-text entireText">
+                    <div style={{ fontSize: 16, textAlign: "center" }}>
+                      <div className="mb-3" style={{ fontWeight: 600 }}>
+                        {itm.tag1}
+                      </div>
+                      <div className="mb-3" style={{ color: "#777" }}>
+                        {itm.tag2}
+                      </div>
+                      <div className="mb-3" style={{ color: "#777" }}>
+                        {itm.tag3}
+                      </div>
+                    </div>
+                    {/* <p class="card-text entireText">
                       Thank you very much for the wonderful job that you did for
                       me.I unnoticed.{" "}
                       <button
@@ -123,8 +181,8 @@ const Sliders = () => {
                       >
                         {i === buttonName ? "Show less" : "Read more"}
                       </button>
-                    </p>
-                    <div
+                    </p> */}
+                    {/* <div
                       style={{
                         display: "flex",
                         justifyContent: "space-between",
@@ -145,7 +203,7 @@ const Sliders = () => {
                           <div className="ml-2">Posted on Google</div>
                         </small>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>

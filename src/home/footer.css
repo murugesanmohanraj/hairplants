@@ -67,3 +67,16 @@ span img:hover {
   border-radius: 50px;
   transition: 1s;
 }
+
+#location9 img {
+  color: white !important;
+  border-radius: 50px;
+}
+
+#location9 img:hover {
+  cursor: pointer;
+  background-color: rgb(95, 95, 95) !important;
+  padding: 6px;
+  border-radius: 50px;
+  transition: 1s;
+}

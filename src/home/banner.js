@@ -70,13 +70,24 @@ const Banner = () => {
               >
                 Hair Transplant that look completely natural, just like real
                 hair
+                <br />
+                <div className="mt-5">
+                  <button
+                    type="button"
+                    className="btn btn-light"
+                    id="button-2"
+                    onClick={() => navigate("/testForm")}
+                  >
+                    I want to know the cost
+                  </button>
+                </div>
               </h2>
               <br />
               <br />
               <br />
             </div>
           </Col>
-          <Col lg={12} md={12} sm={24} xs={24}>
+          <Col lg={12} md={12} sm={24} xs={24} style={{ padding: 0 }}>
             <div
               className="video-container"
               style={{ height: screenWidth <= 767 && screenHeight - 165 }}

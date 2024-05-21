@@ -12,6 +12,8 @@ import { Carousel, Col, Row } from "antd";
 import Sliders from "./slider";
 import "./index.css";
 import MobileSlider from "./mobileSlider";
+import Review from "./review";
+import MobileReview from "./mobileReview";
 
 const Home = () => {
   const cardsData = [
@@ -64,7 +66,7 @@ const Home = () => {
         <h3
           style={{ fontWeight: "bold", marginBottom: 50, textAlign: "center" }}
         >
-          Natural results with our Nano FUE Transplant
+          Look at our natural results!
         </h3>
         <Cards cardsData={cardsData} />
         <div className="mt-4">
@@ -154,6 +156,11 @@ const Home = () => {
         </div>
       </div>
       <div className="mt-4 sliderContainer">
+        <h3
+          style={{ fontWeight: "bold", marginBottom: 50, textAlign: "center" }}
+        >
+          Our results
+        </h3>
         <div className="laptop">
           <Sliders />{" "}
         </div>
@@ -164,6 +171,14 @@ const Home = () => {
       <div className="pt-4 pb-4" style={{ borderTop: "1px solid #80808047" }}>
         <div className="container-fluid">
           <Collapses />
+        </div>
+      </div>
+      <div>
+        <div className="laptop">
+          <Review />
+        </div>
+        <div className="mobile">
+          <MobileReview />
         </div>
       </div>
       <Footer />
