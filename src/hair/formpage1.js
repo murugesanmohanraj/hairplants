@@ -6,8 +6,8 @@ import Goal from "./goal";
 import NotFoundPage from "./genetic";
 import "./form.css";
 import { useNavigate } from "react-router-dom";
-// import AuthAxios from "../intreceptor/authAxios";
-import { ToastContainer } from "react-toastify";
+import AuthAxios from "../intreceptor/authAxios";
+import { ToastContainer, toast } from "react-toastify";
 
 function FormPage1() {
   const [page, setPage] = useState(0);
@@ -19,9 +19,39 @@ function FormPage1() {
     number: "",
     age: "",
   });
+
   const [screenHeight, setScreenHeight] = useState(window.innerHeight);
 
   const FormTitles = ["Face shape", "Hair loss stage", "About you"];
+
+  const notify = (x) => {
+    if (x) {
+      toast.success(
+        "Thank you. Your hair transplant cost analysis report will be sent to your mobile number soon!",
+        {
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        }
+      );
+    } else {
+      toast.error("Something went wrong. Please try again later!", {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+    }
+  };
 
   const PageDisplay = () => {
     switch (page) {
@@ -51,22 +81,25 @@ function FormPage1() {
   const navigate = useNavigate();
 
   const submitData = () => {
-    window.location.href = "/testHair";
-
-    // AuthAxios.post("sdcs", {})
-    //   .then((res) => {
-    //     if (res) {
-    //       notify(true);
-    //       setTimeout(() => {
-    //         window.location.href = "/testHair";
-    //       }, 2000);
-    //     } else {
-    //       notify(false);
-    //     }
-    //   })
-    //   .catch((err) => {
-    //     notify(false, err.message);
-    //   });
+    const apiDatas = {
+      name: aboutYou.name,
+      email: aboutYou.email,
+      mobile_number: aboutYou.number,
+      age: aboutYou.age,
+      face_shape: faceShape,
+      hair_loss_stage: formData,
+    };
+    AuthAxios.post("enquiry/store", {})
+      .then((res) => {
+        if (res) {
+          window.location.href = "/testHair";
+        } else {
+          notify(false);
+        }
+      })
+      .catch((err) => {
+        notify(false, err.message);
+      });
   };
 
   return (

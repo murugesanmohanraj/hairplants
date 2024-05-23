@@ -2,9 +2,6 @@ import React from "react";
 import "./footer.css";
 import { Link } from "react-router-dom";
 import logo from "./img/logo.png";
-import instagram from "./img/insta.jpg";
-import whatsapp from "./img/whatsapp.png";
-import facebook from "./img/facebook.jpg";
 import location from "./img/location1.png";
 import { Col, Row } from "antd";
 import {
