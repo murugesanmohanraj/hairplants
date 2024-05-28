@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import "./haircal.css";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
-// import AuthAxios from "../intreceptor/authAxios";
+import AuthAxios from "../intreceptor/authAxios";
+import { Spin } from "antd";
 
 function Haircal() {
   const navigate = useNavigate();
   const [data, setData] = useState([]);
+  const [spinning, setSpinning] = React.useState(false);
 
   const notify = (x) => {
     if (x) {
@@ -37,27 +39,33 @@ function Haircal() {
     }
   };
 
+  const userId = localStorage.getItem("userId");
+
   const submit = () => {
     if (data.length > 0) {
-      notify(true);
-      setTimeout(() => {
-        navigate("/");
-      }, 2000);
-
-      // AuthAxios.put("sdcs", {})
-      //   .then((res) => {
-      //     if (res) {
-      //       notify(true);
-      //       setTimeout(() => {
-      //         navigate("/");
-      //       }, 2000);
-      //     } else {
-      //       notify(false);
-      //     }
-      //   })
-      //   .catch((err) => {
-      //     notify(false, err.message);
-      //   });
+      const apiDatas = {
+        id: userId,
+        areas_of_treatement: data,
+      };
+      setSpinning(true);
+      AuthAxios.put("enquiry/update", apiDatas)
+        .then((res) => {
+          if (res.data?.success === 200) {
+            setSpinning(false);
+            notify(true);
+            setTimeout(() => {
+              navigate("/");
+              localStorage.removeItem("userId");
+            }, 2000);
+          } else {
+            setSpinning(false);
+            notify(false);
+          }
+        })
+        .catch((err) => {
+          setSpinning(false);
+          notify(false, err.message);
+        });
     }
   };
   return (
@@ -665,15 +673,17 @@ function Haircal() {
                               fill="#F0D8C5"
                               className="faded "
                               onClick={() => {
-                                if (!data.includes(2)) {
-                                  const newDataSet = new Set(data);
-                                  newDataSet.add(2);
-                                  setData([...newDataSet]);
-                                } else {
-                                  const newData = data.filter(
-                                    (item) => item !== 2
+                                if (data.some((item) => item.area === 2)) {
+                                  setData((prevData) =>
+                                    prevData.filter((item) => item.area !== 2)
                                   );
-                                  setData(newData);
+                                } else {
+                                  const newItem = {
+                                    area: 2,
+                                    cost: "15000 to 22500",
+                                    graft: "1000 to 1500",
+                                  };
+                                  setData((prevData) => [...prevData, newItem]);
                                 }
                               }}
                             >
@@ -698,15 +708,17 @@ function Haircal() {
                               fill="#F0D8C5"
                               className="faded"
                               onClick={() => {
-                                if (!data.includes(3)) {
-                                  const newDataSet = new Set(data);
-                                  newDataSet.add(3);
-                                  setData([...newDataSet]);
-                                } else {
-                                  const newData = data.filter(
-                                    (item) => item !== 3
+                                if (data.some((item) => item.area === 3)) {
+                                  setData((prevData) =>
+                                    prevData.filter((item) => item.area !== 3)
                                   );
-                                  setData(newData);
+                                } else {
+                                  const newItem = {
+                                    area: 3,
+                                    cost: "15000 to 22500",
+                                    graft: "1000 to 1500",
+                                  };
+                                  setData((prevData) => [...prevData, newItem]);
                                 }
                               }}
                             >
@@ -726,15 +738,17 @@ function Haircal() {
                               fill="#F0D8C5"
                               className="faded"
                               onClick={() => {
-                                if (!data.includes(1)) {
-                                  const newDataSet = new Set(data);
-                                  newDataSet.add(1);
-                                  setData([...newDataSet]);
-                                } else {
-                                  const newData = data.filter(
-                                    (item) => item !== 1
+                                if (data.some((item) => item.area === 1)) {
+                                  setData((prevData) =>
+                                    prevData.filter((item) => item.area !== 1)
                                   );
-                                  setData(newData);
+                                } else {
+                                  const newItem = {
+                                    area: 1,
+                                    cost: "20000 to 30000",
+                                    graft: "1000 to 1500",
+                                  };
+                                  setData((prevData) => [...prevData, newItem]);
                                 }
                               }}
                             >
@@ -759,15 +773,17 @@ function Haircal() {
                               fill="#F0D8C5"
                               className="faded"
                               onClick={() => {
-                                if (!data.includes(6)) {
-                                  const newDataSet = new Set(data);
-                                  newDataSet.add(6);
-                                  setData([...newDataSet]);
-                                } else {
-                                  const newData = data.filter(
-                                    (item) => item !== 6
+                                if (data.some((item) => item.area === 6)) {
+                                  setData((prevData) =>
+                                    prevData.filter((item) => item.area !== 6)
                                   );
-                                  setData(newData);
+                                } else {
+                                  const newItem = {
+                                    area: 6,
+                                    cost: "15000 to 22500",
+                                    graft: "1000 to 1500",
+                                  };
+                                  setData((prevData) => [...prevData, newItem]);
                                 }
                               }}
                             >
@@ -790,15 +806,17 @@ function Haircal() {
                               fill="#F0D8C5"
                               className="faded"
                               onClick={() => {
-                                if (!data.includes(4)) {
-                                  const newDataSet = new Set(data);
-                                  newDataSet.add(4);
-                                  setData([...newDataSet]);
-                                } else {
-                                  const newData = data.filter(
-                                    (item) => item !== 4
+                                if (data.some((item) => item.area === 4)) {
+                                  setData((prevData) =>
+                                    prevData.filter((item) => item.area !== 4)
                                   );
-                                  setData(newData);
+                                } else {
+                                  const newItem = {
+                                    area: 4,
+                                    cost: "15000 to 22500",
+                                    graft: "1000 to 1500",
+                                  };
+                                  setData((prevData) => [...prevData, newItem]);
                                 }
                               }}
                             >
@@ -825,15 +843,17 @@ function Haircal() {
                               fill="#F0D8C5"
                               className="faded"
                               onClick={() => {
-                                if (!data.includes(5)) {
-                                  const newDataSet = new Set(data);
-                                  newDataSet.add(5);
-                                  setData([...newDataSet]);
-                                } else {
-                                  const newData = data.filter(
-                                    (item) => item !== 5
+                                if (data.some((item) => item.area === 5)) {
+                                  setData((prevData) =>
+                                    prevData.filter((item) => item.area !== 5)
                                   );
-                                  setData(newData);
+                                } else {
+                                  const newItem = {
+                                    area: 5,
+                                    cost: "15000 to 22500",
+                                    graft: "1000 to 1500",
+                                  };
+                                  setData((prevData) => [...prevData, newItem]);
                                 }
                               }}
                             >
@@ -865,15 +885,17 @@ function Haircal() {
                               fill="#F0D8C5"
                               className="faded"
                               onClick={() => {
-                                if (!data.includes(7)) {
-                                  const newDataSet = new Set(data);
-                                  newDataSet.add(7);
-                                  setData([...newDataSet]);
-                                } else {
-                                  const newData = data.filter(
-                                    (item) => item !== 7
+                                if (data.some((item) => item.area === 7)) {
+                                  setData((prevData) =>
+                                    prevData.filter((item) => item.area !== 7)
                                   );
-                                  setData(newData);
+                                } else {
+                                  const newItem = {
+                                    area: 7,
+                                    cost: "15000 to 22500",
+                                    graft: "1000 to 1500",
+                                  };
+                                  setData((prevData) => [...prevData, newItem]);
                                 }
                               }}
                             >
@@ -1105,6 +1127,7 @@ function Haircal() {
           </div>
         </div>
         <ToastContainer />
+        <Spin spinning={spinning} fullscreen />
       </div>
     </>
   );

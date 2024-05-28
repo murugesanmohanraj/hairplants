@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import one from "./img/col/1.jpg";
 import two from "./img/col/2.jpg";
 import three from "./img/col/3.jpg";
@@ -83,6 +83,18 @@ const MobileSlider = () => {
     },
   ];
 
+  useEffect(() => {
+    const disableContextMenu = (e) => {
+      e.preventDefault();
+    };
+
+    document.addEventListener("contextmenu", disableContextMenu);
+
+    return () => {
+      document.removeEventListener("contextmenu", disableContextMenu);
+    };
+  }, []);
+
   const onChange = (currentSlide) => {
     console.log(currentSlide);
   };
@@ -102,36 +114,14 @@ const MobileSlider = () => {
                         height: 180,
                         width: "100%",
                         objectFit: "cover",
+                        userSelect: "none",
+                        pointerEvents: "none",
                       }}
+                      onContextMenu={(e) => e.preventDefault()}
                     />
                     <div className="p-2">
-                      <h5
-                        class="card-title mt-3 mb-4"
-                        style={{ textAlign: "center" }}
-                      >
-                        <i
-                          class="fa-solid fa-star"
-                          style={{ color: "orange", cursor: "pointer" }}
-                        ></i>
-                        <i
-                          class="fa-solid fa-star"
-                          style={{ color: "orange", cursor: "pointer" }}
-                        ></i>
-                        <i
-                          class="fa-solid fa-star"
-                          style={{ color: "orange", cursor: "pointer" }}
-                        ></i>
-                        <i
-                          class="fa-solid fa-star"
-                          style={{ color: "orange", cursor: "pointer" }}
-                        ></i>
-                        <i
-                          class="fa-solid fa-star"
-                          style={{ color: "orange", cursor: "pointer" }}
-                        ></i>
-                      </h5>
                       <div style={{ fontSize: 16, textAlign: "center" }}>
-                        <div className="mb-3" style={{ fontWeight: 600 }}>
+                        <div className="mb-3 mt-3" style={{ fontWeight: 600 }}>
                           {itm.tag1}
                         </div>
                         <div className="mb-3" style={{ color: "#777" }}>

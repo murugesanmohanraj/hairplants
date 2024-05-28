@@ -1,12 +1,24 @@
 import React, { useEffect, useState } from "react";
 import logo from "./img/logo.png";
-import { WhatsAppOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
+import { WhatsappIcon } from "react-share";
 
 const Header = () => {
   const navigate = useNavigate();
   const [showButton, setShowButton] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  const countryCode = "91";
+  const phoneNumber = "9834512885";
+  const message =
+    "Hi Dr.Prabhakar. I would like to know more about the hair transplantation!";
+
+  const sendMessage = () => {
+    const url = `https://api.whatsapp.com/send?phone=${countryCode}${phoneNumber}&text=${encodeURIComponent(
+      message
+    )}`;
+    window.open(url, "_blank");
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -35,6 +47,7 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <div
       style={{
@@ -80,13 +93,12 @@ const Header = () => {
                 </button>
               )
             )}
-            <WhatsAppOutlined
-              style={{
-                color: "green",
-                fontSize: 30,
-                marginTop: 5,
-                cursor: "pointer",
-              }}
+
+            <WhatsappIcon
+              size={32}
+              round
+              style={{ cursor: "pointer" }}
+              onClick={sendMessage}
             />
           </div>
         </div>

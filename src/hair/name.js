@@ -90,6 +90,7 @@ function Nameinfo({ aboutYou, setAboutYou }) {
               name="number"
               value={aboutYou.number}
               onChange={handleChange}
+              maxLength={10}
             />
             {numerror && <div className="error-message">{numerror}</div>}
           </div>

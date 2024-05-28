@@ -4,13 +4,21 @@ import { Link } from "react-router-dom";
 import logo from "./img/logo.png";
 import location from "./img/location1.png";
 import { Col, Row } from "antd";
-import {
-  FacebookFilled,
-  InstagramFilled,
-  WhatsAppOutlined,
-} from "@ant-design/icons";
+import { FacebookFilled, InstagramFilled } from "@ant-design/icons";
+import { WhatsappIcon } from "react-share";
 
 function Footer() {
+  const countryCode = "91";
+  const phoneNumber = "9834512885";
+  const message =
+    "Hi Dr.Prabhakar. I would like to know more about the hair transplantation!";
+
+  const sendMessage = () => {
+    const url = `https://api.whatsapp.com/send?phone=${countryCode}${phoneNumber}&text=${encodeURIComponent(
+      message
+    )}`;
+    window.open(url, "_blank");
+  };
   return (
     <div>
       <div class="container-fluid pb-4" id="footer_container">
@@ -52,12 +60,17 @@ function Footer() {
                 </div>
                 <div>
                   <InstagramFilled
-                    style={{ color: "#ff6307", fontSize: 30, marginRight: 20 }}
+                    style={{ color: "#ff6307", fontSize: 30, marginRight: 10 }}
                   />
                 </div>
                 <div>
-                  <WhatsAppOutlined
-                    style={{ color: "#198754", fontSize: 30 }}
+                  <WhatsappIcon
+                    size={32}
+                    round
+                    style={{
+                      cursor: "pointer",
+                    }}
+                    onClick={sendMessage}
                   />
                 </div>
               </div>
@@ -71,7 +84,7 @@ function Footer() {
                 building complex, CMS bus stop, sathy main road, ganapathy ,
                 coimbatore- 641006
                 <br />
-                98345 12885
+                9834512885
               </li>
             </ul>
           </Col>
@@ -110,7 +123,7 @@ function Footer() {
                 building complex, CMS bus stop, sathy main road, ganapathy ,
                 coimbatore- 641006
                 <br />
-                98345 12885
+                9834512885
               </li>
             </ul>
           </Col>
@@ -193,13 +206,18 @@ function Footer() {
                         style={{
                           color: "#ff6307",
                           fontSize: 30,
-                          marginRight: 20,
+                          marginRight: 10,
                         }}
                       />
                     </div>
                     <div>
-                      <WhatsAppOutlined
-                        style={{ color: "#198754", fontSize: 30 }}
+                      <WhatsappIcon
+                        size={32}
+                        round
+                        style={{
+                          cursor: "pointer",
+                        }}
+                        onClick={sendMessage}
                       />
                     </div>
                   </div>
@@ -224,7 +242,7 @@ function Footer() {
                     building complex, CMS bus stop, sathy main road, ganapathy ,
                     coimbatore- 641006
                     <br />
-                    98345 12885
+                    9834512885
                   </li>
                 </ul>
               </Col>

@@ -8,6 +8,7 @@ import "./form.css";
 import { useNavigate } from "react-router-dom";
 import AuthAxios from "../intreceptor/authAxios";
 import { ToastContainer, toast } from "react-toastify";
+import { Spin } from "antd";
 
 function FormPage1() {
   const [page, setPage] = useState(0);
@@ -19,28 +20,26 @@ function FormPage1() {
     number: "",
     age: "",
   });
+  const [spinning, setSpinning] = React.useState(false);
 
   const [screenHeight, setScreenHeight] = useState(window.innerHeight);
 
   const FormTitles = ["Face shape", "Hair loss stage", "About you"];
 
-  const notify = (x) => {
+  const notify = (x, msg) => {
     if (x) {
-      toast.success(
-        "Thank you. Your hair transplant cost analysis report will be sent to your mobile number soon!",
-        {
-          position: "top-right",
-          autoClose: 2000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "colored",
-        }
-      );
+      toast.success(msg, {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
     } else {
-      toast.error("Something went wrong. Please try again later!", {
+      toast.error(msg, {
         position: "top-right",
         autoClose: 2000,
         hideProgressBar: false,
@@ -89,15 +88,25 @@ function FormPage1() {
       face_shape: faceShape,
       hair_loss_stage: formData,
     };
-    AuthAxios.post("enquiry/store", {})
+    setSpinning(true);
+    AuthAxios.post("enquiry/store", apiDatas)
       .then((res) => {
-        if (res) {
+        if (res.data?.success === 200) {
+          setSpinning(false);
+          localStorage.setItem("userId", res.data?.data?.id);
           window.location.href = "/testHair";
         } else {
-          notify(false);
+          setSpinning(false);
+          if (res.data?.error?.email[0]) {
+            notify(false, res.data?.error?.email[0]);
+          }
+          if (res.data?.error?.mobile_number[0]) {
+            notify(false, res.data?.error?.mobile_number[0]);
+          }
         }
       })
       .catch((err) => {
+        setSpinning(false);
         notify(false, err.message);
       });
   };
@@ -244,6 +253,7 @@ function FormPage1() {
           </div>
         </div>
         <ToastContainer />
+        <Spin spinning={spinning} fullscreen />
       </div>
     </>
   );
