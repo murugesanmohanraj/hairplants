@@ -24,11 +24,10 @@ const Location = () => {
           scrolling="no"
           marginheight="0"
           marginwidth="0"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3915.9505875785426!2d76.98165257543002!3d11.042331654231933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8586c7f74be0d%3A0x5c2878adc2503306!2sKovai%20ENT%20Hospital%20%26%20Research%20Centre!5e0!3m2!1sen!2sin!4v1715336669466!5m2!1sen!2sin"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3915.9504189145923!2d76.9841562!3d11.0423443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba96f8b78033275%3A0x3294beac616925fa!2sDr.Prabhakar%20Hair%20Transplant%20clinic%20in%20Coimbatore!5e0!3m2!1sen!2sin!4v1718811613186!5m2!1sen!2sin"
         >
           <a href="https://www.gps.ie/">gps systems</a>
         </iframe>
-
       </div>
     </div>
   );
