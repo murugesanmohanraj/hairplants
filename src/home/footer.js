@@ -149,7 +149,8 @@ function Footer() {
             <center>
               <br />
               <span style={{ color: "#ccc" }}>
-                © Copyright 2024 All Right Reserved - Kitkat Software Solution
+                © Copyright 2024 All Right Reserved - Kitkat Software
+                Technologies
               </span>
               <br />
             </center>
@@ -268,7 +269,7 @@ function Footer() {
                 <center>
                   <br />
                   <span className="pl-4 pr-4" style={{ color: "#ccc" }}>
-                    © Copyright 2024 - Kitkat Software Solution
+                    © Copyright 2024 - Kitkat Software Technologies
                   </span>
                   <br />
                 </center>

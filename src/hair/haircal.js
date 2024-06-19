@@ -3,12 +3,14 @@ import "./haircal.css";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import AuthAxios from "../intreceptor/authAxios";
-import { Spin } from "antd";
+import { Modal, Spin } from "antd";
 
 function Haircal() {
   const navigate = useNavigate();
   const [data, setData] = useState([]);
   const [spinning, setSpinning] = React.useState(false);
+
+  const [modalOpen, setModalOpen] = useState(false);
 
   const notify = (x) => {
     if (x) {
@@ -48,11 +50,12 @@ function Haircal() {
         areas_of_treatement: data,
       };
       setSpinning(true);
-      AuthAxios.put("enquiry/update", apiDatas)
+      AuthAxios.post("enquiry/update", apiDatas)
         .then((res) => {
           if (res.data?.success === 200) {
             setSpinning(false);
-            notify(true);
+            // notify(true);
+            setModalOpen(true);
             setTimeout(() => {
               navigate("/");
               localStorage.removeItem("userId");
@@ -1128,6 +1131,27 @@ function Haircal() {
         </div>
         <ToastContainer />
         <Spin spinning={spinning} fullscreen />
+        <Modal
+          title=""
+          centered
+          open={modalOpen}
+          closeIcon={false}
+          onCancel={() => setModalOpen(false)}
+          footer={[<></>]}
+        >
+          <div
+            style={{
+              color: "green",
+              minHeight: 165,
+              fontSize: 22,
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            Thank you. Your hair transplant cost analysis report will be sent to
+            your mobile number soon!
+          </div>
+        </Modal>
       </div>
     </>
   );
