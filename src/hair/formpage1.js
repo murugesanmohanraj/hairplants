@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import img from "../img/logo1.jpg";
+import img from "../home/img/logo.png";
 import Nameinfo from "./name";
 import Looklike from "./looklike";
 import Goal from "./goal";
@@ -116,15 +116,16 @@ function FormPage1() {
       <div id="background" style={{ width: "100%", minHeight: screenHeight }}>
         <div className="bg2" style={{ width: "100%", minHeight: screenHeight }}>
           <nav
-            class="navbar navbar-expand-lg navbar-light p-3 pl-4 pr-4"
+            class="navbar navbar-expand-lg navbar-light pl-4 pr-4"
             style={{ backgroundColor: "white" }}
           >
             <div class="d-flex justify-content-between align-items-center w-100">
               <img
                 src={img}
-                width={120}
+                height={60}
+                width={200}
                 alt="test"
-                style={{ objectFit: "cover", height: 45 }}
+                style={{ height: 75, objectFit: "contain" }}
                 onClick={() => navigate("/")}
               ></img>
               <h5

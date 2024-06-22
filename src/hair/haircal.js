@@ -8,6 +8,14 @@ import { Modal, Spin } from "antd";
 function Haircal() {
   const navigate = useNavigate();
   const [data, setData] = useState([]);
+  const [cost, setcost] = useState({
+    from: 0,
+    to: 0,
+  });
+  const [graft, setgraft] = useState({
+    from: 0,
+    to: 0,
+  });
   const [spinning, setSpinning] = React.useState(false);
 
   const [modalOpen, setModalOpen] = useState(false);
@@ -43,11 +51,246 @@ function Haircal() {
 
   const userId = localStorage.getItem("userId");
 
+  const totalArea = data ? data.map((itm) => itm.area) : [];
+
+  const updateGraft1 = () => {
+    if (data.some((item) => item.area === 1)) {
+      setData((prevData) => prevData.filter((item) => item.area !== 1));
+      setcost((prev) => ({
+        ...prev,
+        from: cost.from - 20000,
+        to: cost.from - 30000,
+      }));
+      setgraft((prev) => ({
+        ...prev,
+        from: cost.from - 1000,
+        to: cost.from - 1500,
+      }));
+    } else {
+      const newItem = {
+        area: 1,
+        cost: "20000 to 30000",
+        graft: "1000 to 1500",
+      };
+      setData((prevData) => [...prevData, newItem]);
+      setcost((prev) => ({
+        ...prev,
+        from: cost.from + 20000,
+        to: cost.from + 30000,
+      }));
+      setgraft((prev) => ({
+        ...prev,
+        from: cost.from + 1000,
+        to: cost.from + 1500,
+      }));
+    }
+  };
+
+  const updateGraft2 = () => {
+    if (data.some((item) => item.area === 2)) {
+      setData((prevData) => prevData.filter((item) => item.area !== 2));
+      setcost((prev) => ({
+        ...prev,
+        from: cost.from - 15000,
+        to: cost.from - 22500,
+      }));
+      setgraft((prev) => ({
+        ...prev,
+        from: cost.from - 1000,
+        to: cost.from - 1500,
+      }));
+    } else {
+      const newItem = {
+        area: 2,
+        cost: "15000 to 22500",
+        graft: "1000 to 1500",
+      };
+      setData((prevData) => [...prevData, newItem]);
+      setcost((prev) => ({
+        ...prev,
+        from: cost.from + 15000,
+        to: cost.from + 22500,
+      }));
+      setgraft((prev) => ({
+        ...prev,
+        from: cost.from + 1000,
+        to: cost.from + 1500,
+      }));
+    }
+  };
+
+  const updateGraft3 = () => {
+    if (data.some((item) => item.area === 3)) {
+      setData((prevData) => prevData.filter((item) => item.area !== 3));
+      setcost((prev) => ({
+        ...prev,
+        from: cost.from - 15000,
+        to: cost.from - 22500,
+      }));
+      setgraft((prev) => ({
+        ...prev,
+        from: cost.from - 1000,
+        to: cost.from - 1500,
+      }));
+    } else {
+      const newItem = {
+        area: 3,
+        cost: "15000 to 22500",
+        graft: "1000 to 1500",
+      };
+      setData((prevData) => [...prevData, newItem]);
+      setcost((prev) => ({
+        ...prev,
+        from: cost.from + 15000,
+        to: cost.from + 22500,
+      }));
+      setgraft((prev) => ({
+        ...prev,
+        from: cost.from + 1000,
+        to: cost.from + 1500,
+      }));
+    }
+  };
+
+  const updateGraft4 = () => {
+    if (data.some((item) => item.area === 4)) {
+      setData((prevData) => prevData.filter((item) => item.area !== 4));
+      setcost((prev) => ({
+        ...prev,
+        from: cost.from - 15000,
+        to: cost.from - 22500,
+      }));
+      setgraft((prev) => ({
+        ...prev,
+        from: cost.from - 1000,
+        to: cost.from - 1500,
+      }));
+    } else {
+      const newItem = {
+        area: 4,
+        cost: "15000 to 22500",
+        graft: "1000 to 1500",
+      };
+      setData((prevData) => [...prevData, newItem]);
+      setcost((prev) => ({
+        ...prev,
+        from: cost.from + 15000,
+        to: cost.from + 22500,
+      }));
+      setgraft((prev) => ({
+        ...prev,
+        from: cost.from + 1000,
+        to: cost.from + 1500,
+      }));
+    }
+  };
+
+  const updateGraft5 = () => {
+    if (data.some((item) => item.area === 5)) {
+      setData((prevData) => prevData.filter((item) => item.area !== 5));
+      setcost((prev) => ({
+        ...prev,
+        from: cost.from - 15000,
+        to: cost.from - 22500,
+      }));
+      setgraft((prev) => ({
+        ...prev,
+        from: cost.from - 1000,
+        to: cost.from - 1500,
+      }));
+    } else {
+      const newItem = {
+        area: 5,
+        cost: "15000 to 22500",
+        graft: "1000 to 1500",
+      };
+      setData((prevData) => [...prevData, newItem]);
+      setcost((prev) => ({
+        ...prev,
+        from: cost.from + 15000,
+        to: cost.from + 22500,
+      }));
+      setgraft((prev) => ({
+        ...prev,
+        from: cost.from + 1000,
+        to: cost.from + 1500,
+      }));
+    }
+  };
+
+  const updateGraft6 = () => {
+    if (data.some((item) => item.area === 6)) {
+      setData((prevData) => prevData.filter((item) => item.area !== 6));
+      setcost((prev) => ({
+        ...prev,
+        from: cost.from - 15000,
+        to: cost.from - 22500,
+      }));
+      setgraft((prev) => ({
+        ...prev,
+        from: cost.from - 1000,
+        to: cost.from - 1500,
+      }));
+    } else {
+      const newItem = {
+        area: 6,
+        cost: "15000 to 22500",
+        graft: "1000 to 1500",
+      };
+      setData((prevData) => [...prevData, newItem]);
+      setcost((prev) => ({
+        ...prev,
+        from: cost.from + 15000,
+        to: cost.from + 22500,
+      }));
+      setgraft((prev) => ({
+        ...prev,
+        from: cost.from + 1000,
+        to: cost.from + 1500,
+      }));
+    }
+  };
+
+  const updateGraft7 = () => {
+    if (data.some((item) => item.area === 7)) {
+      setData((prevData) => prevData.filter((item) => item.area !== 7));
+      setcost((prev) => ({
+        ...prev,
+        from: cost.from - 15000,
+        to: cost.from - 22500,
+      }));
+      setgraft((prev) => ({
+        ...prev,
+        from: cost.from - 1000,
+        to: cost.from - 1500,
+      }));
+    } else {
+      const newItem = {
+        area: 7,
+        cost: "15000 to 22500",
+        graft: "1000 to 1500",
+      };
+      setData((prevData) => [...prevData, newItem]);
+      setcost((prev) => ({
+        ...prev,
+        from: cost.from + 15000,
+        to: cost.from + 22500,
+      }));
+      setgraft((prev) => ({
+        ...prev,
+        from: cost.from + 1000,
+        to: cost.from + 1500,
+      }));
+    }
+  };
+
   const submit = () => {
     if (data.length > 0) {
       const apiDatas = {
-        id: userId,
-        areas_of_treatement: data,
+        id: Number(userId),
+        area: `${totalArea.join(",")}`,
+        cost: `${cost.from} to ${cost.to}`,
+        graft: `${graft.from} to ${graft.to}`,
       };
       setSpinning(true);
       AuthAxios.post("enquiry/update", apiDatas)
@@ -59,7 +302,7 @@ function Haircal() {
             setTimeout(() => {
               navigate("/");
               localStorage.removeItem("userId");
-            }, 2000);
+            }, 4000);
           } else {
             setSpinning(false);
             notify(false);
@@ -675,20 +918,7 @@ function Haircal() {
                               id="_2"
                               fill="#F0D8C5"
                               className="faded "
-                              onClick={() => {
-                                if (data.some((item) => item.area === 2)) {
-                                  setData((prevData) =>
-                                    prevData.filter((item) => item.area !== 2)
-                                  );
-                                } else {
-                                  const newItem = {
-                                    area: 2,
-                                    cost: "15000 to 22500",
-                                    graft: "1000 to 1500",
-                                  };
-                                  setData((prevData) => [...prevData, newItem]);
-                                }
-                              }}
+                              onClick={() => updateGraft2()}
                             >
                               <path
                                 d="M87.043,32.771c-17.39-9.184-36.248-6.724-46.38-5.404
@@ -710,20 +940,7 @@ function Haircal() {
                               id="_3"
                               fill="#F0D8C5"
                               className="faded"
-                              onClick={() => {
-                                if (data.some((item) => item.area === 3)) {
-                                  setData((prevData) =>
-                                    prevData.filter((item) => item.area !== 3)
-                                  );
-                                } else {
-                                  const newItem = {
-                                    area: 3,
-                                    cost: "15000 to 22500",
-                                    graft: "1000 to 1500",
-                                  };
-                                  setData((prevData) => [...prevData, newItem]);
-                                }
-                              }}
+                              onClick={() => updateGraft3()}
                             >
                               <path
                                 d="M87.977,31.003c11.072,5.846,21.826,17.862,26.724,25.74
@@ -740,20 +957,7 @@ function Haircal() {
                               id="_1"
                               fill="#F0D8C5"
                               className="faded"
-                              onClick={() => {
-                                if (data.some((item) => item.area === 1)) {
-                                  setData((prevData) =>
-                                    prevData.filter((item) => item.area !== 1)
-                                  );
-                                } else {
-                                  const newItem = {
-                                    area: 1,
-                                    cost: "20000 to 30000",
-                                    graft: "1000 to 1500",
-                                  };
-                                  setData((prevData) => [...prevData, newItem]);
-                                }
-                              }}
+                              onClick={() => updateGraft1()}
                             >
                               <path
                                 d="M78.751,59.59c1.49,3.994,5.844,5.922,13.704,6.072c4.168,0.078,10.916-0.248,15.98-0.854
@@ -775,20 +979,7 @@ function Haircal() {
                               id="_6"
                               fill="#F0D8C5"
                               className="faded"
-                              onClick={() => {
-                                if (data.some((item) => item.area === 6)) {
-                                  setData((prevData) =>
-                                    prevData.filter((item) => item.area !== 6)
-                                  );
-                                } else {
-                                  const newItem = {
-                                    area: 6,
-                                    cost: "15000 to 22500",
-                                    graft: "1000 to 1500",
-                                  };
-                                  setData((prevData) => [...prevData, newItem]);
-                                }
-                              }}
+                              onClick={() => updateGraft6()}
                             >
                               <path
                                 d="M157.931,28.104c8.934,4.316,18.002,4.462,24.386,3.72
@@ -808,20 +999,7 @@ function Haircal() {
                               id="_4"
                               fill="#F0D8C5"
                               className="faded"
-                              onClick={() => {
-                                if (data.some((item) => item.area === 4)) {
-                                  setData((prevData) =>
-                                    prevData.filter((item) => item.area !== 4)
-                                  );
-                                } else {
-                                  const newItem = {
-                                    area: 4,
-                                    cost: "15000 to 22500",
-                                    graft: "1000 to 1500",
-                                  };
-                                  setData((prevData) => [...prevData, newItem]);
-                                }
-                              }}
+                              onClick={() => updateGraft4()}
                             >
                               <path
                                 d="M124.162,2.589c-1.416-0.168-2.854-0.328-4.324-0.474c-3.084-0.31-6.21-0.494-9.29-0.552
@@ -845,20 +1023,7 @@ function Haircal() {
                               id="_5"
                               fill="#F0D8C5"
                               className="faded"
-                              onClick={() => {
-                                if (data.some((item) => item.area === 5)) {
-                                  setData((prevData) =>
-                                    prevData.filter((item) => item.area !== 5)
-                                  );
-                                } else {
-                                  const newItem = {
-                                    area: 5,
-                                    cost: "15000 to 22500",
-                                    graft: "1000 to 1500",
-                                  };
-                                  setData((prevData) => [...prevData, newItem]);
-                                }
-                              }}
+                              onClick={() => updateGraft5()}
                             >
                               <path
                                 d="M186.135,39.104c-0.832-1.872-1.728-3.652-2.682-5.356
@@ -887,20 +1052,7 @@ function Haircal() {
                               id="_7"
                               fill="#F0D8C5"
                               className="faded"
-                              onClick={() => {
-                                if (data.some((item) => item.area === 7)) {
-                                  setData((prevData) =>
-                                    prevData.filter((item) => item.area !== 7)
-                                  );
-                                } else {
-                                  const newItem = {
-                                    area: 7,
-                                    cost: "15000 to 22500",
-                                    graft: "1000 to 1500",
-                                  };
-                                  setData((prevData) => [...prevData, newItem]);
-                                }
-                              }}
+                              onClick={() => updateGraft7()}
                             >
                               <path
                                 d="M194.591,73.356c-1.542-12.486-3.884-22.902-7.346-31.59
@@ -1136,7 +1288,6 @@ function Haircal() {
           centered
           open={modalOpen}
           closeIcon={false}
-          onCancel={() => setModalOpen(false)}
           footer={[<></>]}
         >
           <div
