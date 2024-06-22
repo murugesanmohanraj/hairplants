@@ -110,7 +110,7 @@ function Looklike({ formData, setFormData }) {
                 ></input>
                 &nbsp;
                 <label class="form-check-label mt-1" for="flexRadioDefault1">
-                  Stage-1
+                  Stage 1
                 </label>
               </div>
 
