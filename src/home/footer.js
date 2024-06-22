@@ -1,7 +1,7 @@
 import React from "react";
 import "./footer.css";
 import { Link } from "react-router-dom";
-import logo from "./img/logo.png";
+import logo from "./img/logo2.png";
 import location from "./img/location1.png";
 import { Col, Row } from "antd";
 import { FacebookFilled, InstagramFilled } from "@ant-design/icons";
