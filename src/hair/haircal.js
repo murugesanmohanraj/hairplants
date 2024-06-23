@@ -59,12 +59,12 @@ function Haircal() {
       setcost((prev) => ({
         ...prev,
         from: cost.from - 20000,
-        to: cost.from - 30000,
+        to: cost.to - 30000,
       }));
       setgraft((prev) => ({
         ...prev,
-        from: cost.from - 1000,
-        to: cost.from - 1500,
+        from: graft.from - 1000,
+        to: graft.to - 1500,
       }));
     } else {
       const newItem = {
@@ -76,12 +76,12 @@ function Haircal() {
       setcost((prev) => ({
         ...prev,
         from: cost.from + 20000,
-        to: cost.from + 30000,
+        to: cost.to + 30000,
       }));
       setgraft((prev) => ({
         ...prev,
-        from: cost.from + 1000,
-        to: cost.from + 1500,
+        from: graft.from + 1000,
+        to: graft.to + 1500,
       }));
     }
   };
@@ -92,12 +92,12 @@ function Haircal() {
       setcost((prev) => ({
         ...prev,
         from: cost.from - 15000,
-        to: cost.from - 22500,
+        to: cost.to - 22500,
       }));
       setgraft((prev) => ({
         ...prev,
-        from: cost.from - 1000,
-        to: cost.from - 1500,
+        from: graft.from - 1000,
+        to: graft.to - 1500,
       }));
     } else {
       const newItem = {
@@ -109,12 +109,12 @@ function Haircal() {
       setcost((prev) => ({
         ...prev,
         from: cost.from + 15000,
-        to: cost.from + 22500,
+        to: cost.to + 22500,
       }));
       setgraft((prev) => ({
         ...prev,
-        from: cost.from + 1000,
-        to: cost.from + 1500,
+        from: graft.from + 1000,
+        to: graft.to + 1500,
       }));
     }
   };
@@ -125,12 +125,12 @@ function Haircal() {
       setcost((prev) => ({
         ...prev,
         from: cost.from - 15000,
-        to: cost.from - 22500,
+        to: cost.to - 22500,
       }));
       setgraft((prev) => ({
         ...prev,
-        from: cost.from - 1000,
-        to: cost.from - 1500,
+        from: graft.from - 1000,
+        to: graft.to - 1500,
       }));
     } else {
       const newItem = {
@@ -142,12 +142,12 @@ function Haircal() {
       setcost((prev) => ({
         ...prev,
         from: cost.from + 15000,
-        to: cost.from + 22500,
+        to: cost.to + 22500,
       }));
       setgraft((prev) => ({
         ...prev,
-        from: cost.from + 1000,
-        to: cost.from + 1500,
+        from: graft.from + 1000,
+        to: graft.to + 1500,
       }));
     }
   };
@@ -158,12 +158,12 @@ function Haircal() {
       setcost((prev) => ({
         ...prev,
         from: cost.from - 15000,
-        to: cost.from - 22500,
+        to: cost.to - 22500,
       }));
       setgraft((prev) => ({
         ...prev,
-        from: cost.from - 1000,
-        to: cost.from - 1500,
+        from: graft.from - 1000,
+        to: graft.to - 1500,
       }));
     } else {
       const newItem = {
@@ -175,12 +175,12 @@ function Haircal() {
       setcost((prev) => ({
         ...prev,
         from: cost.from + 15000,
-        to: cost.from + 22500,
+        to: cost.to + 22500,
       }));
       setgraft((prev) => ({
         ...prev,
-        from: cost.from + 1000,
-        to: cost.from + 1500,
+        from: graft.from + 1000,
+        to: graft.to + 1500,
       }));
     }
   };
@@ -191,12 +191,12 @@ function Haircal() {
       setcost((prev) => ({
         ...prev,
         from: cost.from - 15000,
-        to: cost.from - 22500,
+        to: cost.to - 22500,
       }));
       setgraft((prev) => ({
         ...prev,
-        from: cost.from - 1000,
-        to: cost.from - 1500,
+        from: graft.from - 1000,
+        to: graft.to - 1500,
       }));
     } else {
       const newItem = {
@@ -208,12 +208,12 @@ function Haircal() {
       setcost((prev) => ({
         ...prev,
         from: cost.from + 15000,
-        to: cost.from + 22500,
+        to: cost.to + 22500,
       }));
       setgraft((prev) => ({
         ...prev,
-        from: cost.from + 1000,
-        to: cost.from + 1500,
+        from: graft.from + 1000,
+        to: graft.to + 1500,
       }));
     }
   };
@@ -224,12 +224,12 @@ function Haircal() {
       setcost((prev) => ({
         ...prev,
         from: cost.from - 15000,
-        to: cost.from - 22500,
+        to: cost.to - 22500,
       }));
       setgraft((prev) => ({
         ...prev,
-        from: cost.from - 1000,
-        to: cost.from - 1500,
+        from: graft.from - 1000,
+        to: graft.to - 1500,
       }));
     } else {
       const newItem = {
@@ -241,12 +241,12 @@ function Haircal() {
       setcost((prev) => ({
         ...prev,
         from: cost.from + 15000,
-        to: cost.from + 22500,
+        to: cost.to + 22500,
       }));
       setgraft((prev) => ({
         ...prev,
-        from: cost.from + 1000,
-        to: cost.from + 1500,
+        from: graft.from + 1000,
+        to: graft.to + 1500,
       }));
     }
   };
@@ -257,12 +257,12 @@ function Haircal() {
       setcost((prev) => ({
         ...prev,
         from: cost.from - 15000,
-        to: cost.from - 22500,
+        to: cost.to - 22500,
       }));
       setgraft((prev) => ({
         ...prev,
-        from: cost.from - 1000,
-        to: cost.from - 1500,
+        from: graft.from - 1000,
+        to: graft.to - 1500,
       }));
     } else {
       const newItem = {
@@ -274,12 +274,12 @@ function Haircal() {
       setcost((prev) => ({
         ...prev,
         from: cost.from + 15000,
-        to: cost.from + 22500,
+        to: cost.to + 22500,
       }));
       setgraft((prev) => ({
         ...prev,
-        from: cost.from + 1000,
-        to: cost.from + 1500,
+        from: graft.from + 1000,
+        to: graft.to + 1500,
       }));
     }
   };
@@ -292,6 +292,8 @@ function Haircal() {
         cost: `${cost.from} to ${cost.to}`,
         graft: `${graft.from} to ${graft.to}`,
       };
+
+      console.log(apiDatas);
       setSpinning(true);
       AuthAxios.post("enquiry/update", apiDatas)
         .then((res) => {
