@@ -284,6 +284,13 @@ function Haircal() {
     }
   };
 
+  console.log({
+    id: Number(userId),
+    area: `${totalArea.join(",")}`,
+    cost: `${cost.from} to ${cost.to}`,
+    graft: `${graft.from} to ${graft.to}`,
+  });
+
   const submit = () => {
     if (data.length > 0) {
       const apiDatas = {
@@ -293,7 +300,9 @@ function Haircal() {
         graft: `${graft.from} to ${graft.to}`,
       };
 
-      console.log(apiDatas);
+      const dataString = JSON.stringify(apiDatas);
+      localStorage.setItem("oldData", dataString);
+
       setSpinning(true);
       AuthAxios.post("enquiry/update", apiDatas)
         .then((res) => {

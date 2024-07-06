@@ -5,6 +5,7 @@ import Home from "./home";
 import Location from "./home/location";
 import HairTest from "./hair/hairTest";
 import "react-toastify/dist/ReactToastify.css";
+import OurResults from "./home/ourResults";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/testHair" element={<HairTest />} />
           <Route path="/" element={<Home />} />
           <Route path="/location" element={<Location />} />
+          <Route path="/ourResults" element={<OurResults />} />
         </Routes>
       </BrowserRouter>
     </div>
