@@ -63,11 +63,11 @@ const Header = () => {
           <div>
             <img
               src={logo}
-              height={60}
+              height={70}
               width={200}
               alt=""
               class="logo-img"
-              style={{ height: 75, objectFit: "contain" }}
+              style={{ height: 90, objectFit: "contain", marginLeft: "-20px" }}
             />
           </div>
           <div className="d-flex justify-content-between align-items-center">

@@ -30,6 +30,7 @@ import twenty7 from "./img/show/27.jpg";
 import twenty8 from "./img/show/28.jpg";
 import twenty9 from "./img/show/29.jpg";
 import thirty from "./img/show/30.jpg";
+import { WhatsappIcon } from "react-share";
 
 const { Meta } = Card;
 
@@ -216,6 +217,18 @@ const OurResults = () => {
       image: thirty,
     },
   ];
+
+  const countryCode = "91";
+  const phoneNumber = "6380388803";
+  const message =
+    "Hi Dr.Prabhakar. I would like to know more about the hair transplantation!";
+
+  const sendMessage = () => {
+    const url = `https://api.whatsapp.com/send?phone=${countryCode}${phoneNumber}&text=${encodeURIComponent(
+      message
+    )}`;
+    window.open(url, "_blank");
+  };
   return (
     <div>
       <center>
@@ -243,6 +256,14 @@ const OurResults = () => {
             </Col>
           ))}
         </Row>
+      </div>
+      <div style={{ position: "fixed", bottom: 25, right: 25 }}>
+        <WhatsappIcon
+          size={45}
+          round
+          style={{ cursor: "pointer" }}
+          onClick={sendMessage}
+        />
       </div>
     </div>
   );
