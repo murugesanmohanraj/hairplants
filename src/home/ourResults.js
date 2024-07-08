@@ -6,12 +6,7 @@ import three from "./img/show/3.jpg";
 import four from "./img/show/4.jpg";
 import five from "./img/show/5.jpg";
 import six from "./img/show/6.jpg";
-import seven from "./img/show/7.jpg";
 import eight from "./img/show/8.jpg";
-import nine from "./img/show/9.jpg";
-import ten from "./img/show/10.jpg";
-import eleven from "./img/show/11.jpg";
-import twel from "./img/show/12.jpg";
 import thirteen from "./img/show/13.jpg";
 import fourteen from "./img/show/14.jpg";
 import fifteem from "./img/show/15.jpg";
@@ -37,181 +32,151 @@ const { Meta } = Card;
 const OurResults = () => {
   const resultDatas = [
     {
-      title: "Grade 5 baaldness",
+      title: "Grade 5 Baldness",
       subTitle: "I-PRF",
       description: "Results after 6 months",
       image: one,
     },
     {
-      title: "Grade 2 baaldness (Ludwig)",
+      title: "Grade 2 Baldness (Ludwig)",
       subTitle: "I-PRF",
       description: "Results after 4 months",
       image: two,
     },
     {
-      title: "Grade 4 baaldness",
+      title: "Grade 4 Baldness",
       subTitle: "GFC",
       description: "Results after 4 months",
       image: three,
     },
     {
-      title: "Grade 2 baaldness (Ludwig)",
+      title: "Grade 2 Baldness (Ludwig)",
       subTitle: "GFC",
       description: "Results after 5 months",
       image: four,
     },
     {
-      title: "Grade 3 baaldness (Ludwig)",
+      title: "Grade 3 Baldness (Ludwig)",
       subTitle: "I-PRF",
       description: "Results after 6 months",
       image: five,
     },
     {
-      title: "Grade 4 baaldness",
+      title: "Grade 4 Baldness",
       subTitle: "GFC",
       description: "Results after 4 months",
       image: six,
     },
     {
-      title: "Grade 3 baaldness",
-      subTitle: "I-PRF",
-      description: "Results after 4 months",
-      image: seven,
-    },
-    {
-      title: "Grade 1 baaldness (Ludwig)",
+      title: "Grade 1 Baldness (Ludwig)",
       subTitle: "GFC",
       description: "Results after 3 months",
       image: eight,
     },
     {
-      title: "Grade 4 baaldness",
-      subTitle: "GFC",
-      description: "Results after 5 months",
-      image: nine,
-    },
-    {
-      title: "Grade 3 baaldness (Ludwig)",
-      subTitle: "I-PRF",
-      description: "Results after 4 months",
-      image: ten,
-    },
-    {
-      title: "Grade 2 baaldness (Ludwig)",
-      subTitle: "GFC",
-      description: "Results after 5 months",
-      image: eleven,
-    },
-    {
-      title: "Grade 4 baaldness",
-      subTitle: "GFC",
-      description: "Results after 3 months",
-      image: twel,
-    },
-    {
-      title: "Grade 2 baaldness (Ludwig)",
+      title: "Grade 2 Baldness (Ludwig)",
       subTitle: "I-PRF",
       description: "Results after 4 months",
       image: thirteen,
     },
     {
-      title: "Grade 3 baaldness (Vertex)",
+      title: "Grade 3 Baldness (Vertex)",
       subTitle: "I-PRF",
       description: "Results after 3 months",
       image: fourteen,
     },
     {
-      title: "Grade 2 baaldness (Ludwig)",
+      title: "Grade 2 Baldness (Ludwig)",
       subTitle: "I-PRF",
       description: "Results after 4 months",
       image: fifteem,
     },
     {
-      title: "Grade 4 baaldness",
+      title: "Grade 4 Baldness",
       subTitle: "I-PRF",
       description: "Results after 6 months",
       image: sixteen,
     },
     {
-      title: "Grade 3 baaldness (Ludwig)",
+      title: "Grade 3 Baldness (Ludwig)",
       subTitle: "GFC",
       description: "Results after 4 months",
       image: seventeen,
     },
     {
-      title: "Grade 5 baaldness",
+      title: "Grade 5 Baldness",
       subTitle: "GFC",
       description: "Results after 6 months",
       image: eighteen,
     },
     {
-      title: "Grade 5 baaldness",
+      title: "Grade 5 Baldness",
       subTitle: "I-PRF",
       description: "Results after 4 months",
       image: ninteen,
     },
     {
-      title: "Grade 3 baaldness (Ludwig)",
+      title: "Grade 3 Baldness (Ludwig)",
       subTitle: "GFC",
       description: "Results after 4 months",
       image: twenty,
     },
     {
-      title: "Grade 3 baaldness (Ludwig)",
+      title: "Grade 3 Baldness (Ludwig)",
       subTitle: "I-PRF",
       description: "Results after 5 months",
       image: twenty1,
     },
     {
-      title: "Grade 2 baaldness (Ludwig)",
+      title: "Grade 2 Baldness (Ludwig)",
       subTitle: "I-PRF",
       description: "Results after 3 months",
       image: twenty2,
     },
     {
-      title: "Grade 4 baaldness",
+      title: "Grade 4 Baldness",
       subTitle: "GFC",
       description: "Results after 5 months",
       image: twenty3,
     },
     {
-      title: "Grade 5 baaldness",
+      title: "Grade 5 Baldness",
       subTitle: "GFC",
       description: "Results after 6 months",
       image: twenty4,
     },
     {
-      title: "Grade 6 baaldness",
+      title: "Grade 6 Baldness",
       subTitle: "I-PRF",
       description: "Results after 4 months",
       image: twenty5,
     },
     {
-      title: "Grade 3 baaldness (Vertex)",
+      title: "Grade 3 Baldness (Vertex)",
       subTitle: "GFC",
       description: "Results after 3 months",
       image: twenty6,
     },
     {
-      title: "Grade 3 baaldness (Ludwig)",
+      title: "Grade 3 Baldness (Ludwig)",
       subTitle: "I-PRF",
       description: "Results after 4 months",
       image: twenty7,
     },
     {
-      title: "Grade 2 baaldness (Ludwig)",
+      title: "Grade 2 Baldness (Ludwig)",
       subTitle: "GFC",
       description: "Results after 3 months",
       image: twenty8,
     },
     {
-      title: "Grade 4 baaldness (Vertex)",
+      title: "Grade 4 Baldness (Vertex)",
       subTitle: "I-PRF",
       description: "Results after 5 months",
       image: twenty9,
     },
     {
-      title: "Grade 5 baaldness",
+      title: "Grade 5 Baldness",
       subTitle: "GFC",
       description: "Results after 6 months",
       image: thirty,
