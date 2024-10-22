@@ -1,16 +1,13 @@
 import React, { useEffect } from "react";
 import Slider from "react-slick";
-import one from "./img/col/1.jpg";
-import two from "./img/col/2.jpg";
-import three from "./img/col/3.jpg";
-import four from "./img/col/4.jpg";
-import five from "./img/col/5.jpg";
-import six from "./img/col/6.jpg";
-import seven from "./img/col/7.jpg";
-import eight from "./img/col/8.jpg";
-import nine from "./img/col/9.jpg";
-import ten from "./img/col/10.jpg";
-import eleven from "./img/col/11.jpg";
+import four from "./img/new/4.png";
+import five from "./img/new/5.png";
+import six from "./img/new/6.png";
+import seven from "./img/new/7.png";
+import eight from "./img/new/8.png";
+import nine from "./img/new/9.png";
+import ten from "./img/new/10.png";
+import eleven from "./img/new/11.png";
 import "./slider.css";
 
 const Sliders = () => {
@@ -50,24 +47,6 @@ const Sliders = () => {
   };
 
   const data = [
-    {
-      img: one,
-      tag1: "Stage 4 baldness.",
-      tag2: "Restored with 3570 grafts.",
-      tag3: "After 10 months result.",
-    },
-    {
-      img: two,
-      tag1: "Stage 5 baldness.",
-      tag2: "Restored with 4715 grafts.",
-      tag3: "After 12 months result.",
-    },
-    {
-      img: three,
-      tag1: "Stage 4 baldness.",
-      tag2: "Restored with 3800 grafts.",
-      tag3: "After 9 months result.",
-    },
     {
       img: four,
       tag1: "Stage 3 baldness.",
